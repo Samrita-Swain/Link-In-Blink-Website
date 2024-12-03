@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+
+@layer components {
+  .nav-link {
+    @apply relative font-semibold text-white cursor-pointer text-[17px] w-fit md:block hidden;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply block absolute h-[3px] bg-[#87289a] w-full scale-x-0 transition-transform duration-300 origin-center;
+  }
+
+  .nav-link:hover::after {
+    @apply scale-x-100;
+  }
+
+
+  .nav-link-mobile {
+    @apply relative mb-[2rem] font-semibold text-white cursor-pointer text-[27px] w-fit md:block;
+  }
+
+  .nav-link-mobile::after {
+    content: '';
+    @apply block absolute h-[3px] bg-[#87289a] w-full scale-x-0 transition-transform duration-300 origin-center;
+  }
+
+  .nav-link-mobile:hover::after {
+    @apply scale-x-100;
+  }
+  .nav-link .active{
+    border-bottom: 3px solid #81259f;
+  }
+}

@@ -8,7 +8,6 @@ import Testimonial from '@/Components/Testimonial';
 import Footer from '@/Components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
-import "@/styles/globals.css";
 
 function Home() {
 
